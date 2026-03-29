@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 300px; padding: 15px; font-family: -apple-system, sans-serif; text-align: center; background: #fff; }
+    #canvas-container { position: relative; margin-top: 15px; display: none; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }
+    canvas { cursor: crosshair; max-width: 100%; height: auto; background: #eee; }
+    .btn-group { margin-top: 15px; display: flex; gap: 8px; }
+    .btn { flex: 1; border: none; padding: 10px; border-radius: 20px; font-weight: bold; cursor: pointer; }
+    #save { background: #007AFF; color: white; display: none; }
+    #reset { background: #efefef; color: #333; }
+    h3 { margin: 0; font-size: 16px; }
+    p { font-size: 11px; color: #666; margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <h3>Cursor Lab</h3>
+  <p>Upload & click-drag to circle crop</p>
+  <input type="file" id="upload" accept="image/*">
+  
+  <div id="canvas-container">
+    <canvas id="editor"></canvas>
+  </div>
+
+  <div class="btn-group">
+    <button id="save" class="btn">BOOM!</button>
+    <button id="reset" class="btn">Reset</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
